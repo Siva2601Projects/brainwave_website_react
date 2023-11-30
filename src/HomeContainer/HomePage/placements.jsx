@@ -75,7 +75,7 @@ const Placements=()=>{
                 <div className="team-active">
                     <div className="single-cat text-center">
                         <div className="cat-icon">
-                            <img src="assets/img/gallery/team1.png" alt="" />
+                            <img src="assets/img/gallery/user_avatar.png" alt="" />
                         </div>
                         <div className="cat-cap">
                             <h5><a href="services.html">Kalpana</a></h5>
@@ -84,16 +84,16 @@ const Placements=()=>{
                     </div>
                     <div className="single-cat text-center">
                         <div className="cat-icon">
-                            <img src="assets/img/gallery/team2.png" alt="" />
+                            <img src="assets/img/gallery/derbin.png" alt="" />
                         </div>
                         <div className="cat-cap">
                             <h5><a href="services.html">Derbin</a></h5>
-                            <p>Picobytes Private Limited</p>
+                            <p>UX Designer, Vibrant Education</p>
                         </div>
                     </div>
                     <div className="single-cat text-center">
                         <div className="cat-icon">
-                            <img src="assets/img/gallery/team3.png" alt="" />
+                            <img src="assets/img/gallery/user_avatar.png" alt="" />
                         </div>
                         <div className="cat-cap">
                             <h5><a href="services.html">Hariharan</a></h5>
@@ -102,7 +102,7 @@ const Placements=()=>{
                     </div>
                     <div className="single-cat text-center">
                         <div className="cat-icon">
-                            <img src="assets/img/gallery/team4.png" alt="" />
+                            <img src="assets/img/gallery/user_avatar.png" alt="" />
                         </div>
                         <div className="cat-cap">
                             <h5><a href="services.html">Jai Jothi</a></h5>
@@ -111,7 +111,7 @@ const Placements=()=>{
                     </div>
                     <div className="single-cat text-center">
                         <div className="cat-icon">
-                            <img src="assets/img/gallery/team3.png" alt="" />
+                            <img src="assets/img/gallery/user_avatar.png" alt="" />
                         </div>
                         <div className="cat-cap">
                             <h5><a href="services.html">Dinesh</a></h5>

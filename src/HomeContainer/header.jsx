@@ -32,7 +32,7 @@ const Header=()=>{
                                                         <li><a href="contact.html">Contact</a></li>
                                                         
                                                         <li className="button-header margin-left "><a href="#" className="btn">Join</a></li>
-                                                        <li className="button-header"><a href="login.html" className="btn btn3">Log in</a></li>
+                                                        <li className="button-header"><a href="https://crm.brainwavetechz.com/login" className="btn btn3">Log in</a></li>
                                                     </ul>
                                                 </nav>
                                             </div>

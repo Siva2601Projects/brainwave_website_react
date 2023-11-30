@@ -44,10 +44,10 @@ const AboutHighLights=()=>{
                     <div className="right-content1">
                         
                         <div className="right-img">
-                            <img src="assets/img/gallery/about.png" alt="" />
+                            <img src="assets/img/gallery/about.mp4" alt="" />
 
                             <div className="video-icon" >
-                                <a className="popup-video btn-icon" href="#"><i className="fas fa-play"></i></a>
+                                <a className="popup-video btn-icon" href="assets/img/gallery/about.mp4"><i className="fas fa-play"></i></a>
                             </div>
                         </div>
                     </div>

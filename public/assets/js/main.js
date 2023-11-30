@@ -108,7 +108,7 @@
         });
       }
     }
-    mainSlider();
+    //mainSlider();
 
 
 
