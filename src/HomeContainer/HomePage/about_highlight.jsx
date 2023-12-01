@@ -1,66 +1,12 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import ReactPlayer from "react-player";
 
 const AboutHighLights=()=>{
 
-    const initVideoPlayer = false;
+    const [playVideo, setPlayVideo] = useState(false);
 
     useEffect(()=>{
-        console.log('fluid');
-        const script = document.createElement('script');
-        script.src = 'https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js';
-        script.async = true;
-
-        document.body.appendChild(script);
-
-        script.onload = () => {
-            const options = {
-                layoutControls: {
-                    controlBar: {
-                        autoHideTimeout: 3,
-                        animated: true,
-                        autoHide: true,
-                    },
-                    htmlOnPauseBlock: {
-                        html: null,
-                        height: null,
-                        width: null,
-                    },
-                    autoPlay: true,
-                    mute: true,
-                    allowTheatre: true,
-                    playPauseAnimation: false,
-                    playbackRateEnabled: false,
-                    allowDownload: false,
-                    playButtonShowing: false,
-                    fillToContainer: false,
-                    posterImage: '',
-                },
-                vastOptions: {
-                    adList: [],
-                    adCTAText: false,
-                    adCTATextPosition: '',
-                },
-            };
-
-            const videoElement = document.createElement('video');
-            videoElement.id = 'video-id';
-            videoElement.className = 'fluid-player-default';
-
-            const sourceElement = document.createElement('source');
-            sourceElement.src = 'assets/img/about.mp4';
-            sourceElement.type = 'video/mp4';
-
-            videoElement.appendChild(sourceElement);
-
-            document.getElementById('video-container').appendChild(videoElement);
-
-            window.fluidPlayer('video-id', options);
-        };
-
-        return () => {
-            // Cleanup script
-            document.body.removeChild(script);
-        };
+        
     }, []);
 
     return(
@@ -109,11 +55,19 @@ const AboutHighLights=()=>{
                         <div className="right-img">
                             {/*<img src="assets/img/about.mp4" alt="" />*/}
 
-                            <div id="video-container1" />
+                            <ReactPlayer url={'assets/img/about.mp4'} playing = {playVideo} controls={playVideo} onPause={()=>{
+                                setPlayVideo(false);
+                            }} onEnded={()=>{
+                                setPlayVideo(false);
+                            }}/>
 
-                            <div className="video-icon" >
-                                <a className="popup-video btn-icon" href="#"><i className="fas fa-play"></i></a>
-                            </div>
+                            {!playVideo ?<div className="video-icon" >
+                                <a className="popup-video btn-icon" href="#" target="_blank" onClick={(e)=>{
+                                        e.preventDefault();
+                                        setPlayVideo(true); 
+                                    }
+                                }><i className="fas fa-play"></i></a>
+                            </div>: <></>}
                         </div>
                     </div>
                 </div>

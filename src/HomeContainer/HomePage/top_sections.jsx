@@ -113,7 +113,9 @@ const TopSections=()=>{
                     <div className="row justify-content-center">
                         <div className="col-xl-12">
                             <div className="section-tittle text-center mt-20">
-                                <a href="courses.html" className="border-btn">Get a callback</a>
+                                <a href="/" className="border-btn" onClick={(e)=>{
+                                    e.preventDefault();
+                                }}>Get a callback</a>
                             </div>
                         </div>
                     </div>

@@ -3,11 +3,14 @@ import $ from 'jquery';
 import 'slick-carousel/slick/slick.min.js'; // Import Slick Carousel JS
 //import 'slick-carousel/slick/slick.css'; 
 import '../../slick.css';
+import { DialogActions } from "@mui/joy";
+import { Button, Dialog, DialogContent, DialogTitle } from "@mui/material";
+import CallBackDialog from "../Components/callback_dialog";
 
 
 const FeaturedCourses=()=>{
 
-    const [applyEffect, setApplyEffects] = useState(false);
+    const [callBackDialog, setCallBackDialog] = useState(false);
 
     useEffect(()=>{
         // courses-area
@@ -73,6 +76,11 @@ const FeaturedCourses=()=>{
    
      }, []);
      
+     const handleDialogClose = () => {
+        console.log('closed');
+        setCallBackDialog(false);
+    };
+
     return(
         <div>
             <div className="courses-area section-padding40 fix">
@@ -111,7 +119,10 @@ const FeaturedCourses=()=>{
                                             <span style={{fontSize:'12px'}}>Starts from </span><span>₹8000</span>
                                         </div>
                                     </div>
-                                    <a href="#" className="border-btn border-btn2">Find out more</a>
+                                    <a onClick={(e)=>{
+                                        //e.preventDefault();
+                                        setCallBackDialog(true);
+                                    }} className="border-btn border-btn2">Know More</a>
                                 </div>
 
                             </div>
@@ -142,7 +153,10 @@ const FeaturedCourses=()=>{
                                             <span style={{fontSize:'12px'}}>Starts from </span><span>₹8000</span>
                                         </div>
                                     </div>
-                                    <a href="#" className="border-btn border-btn2">Find out more</a>
+                                    <a onClick={(e)=>{
+                                        //e.preventDefault();
+                                        setCallBackDialog(true);
+                                    }} className="border-btn border-btn2">Know More</a>
                                 </div>
                             </div>
                         </div>
@@ -172,7 +186,10 @@ const FeaturedCourses=()=>{
                                             <span style={{fontSize:'12px'}}>Starts from </span><span>₹8000</span>
                                         </div>
                                     </div>
-                                    <a href="#" className="border-btn border-btn2">Find out more</a>
+                                    <a onClick={(e)=>{
+                                        //e.preventDefault();
+                                        setCallBackDialog(true);
+                                    }} className="border-btn border-btn2">Know More</a>
                                 </div>
 
                             </div>
@@ -202,7 +219,10 @@ const FeaturedCourses=()=>{
                                             <span style={{fontSize:'12px'}}>Starts from </span><span>₹8000</span>
                                         </div>
                                     </div>
-                                    <a href="#" className="border-btn border-btn2">Find out more</a>
+                                    <a onClick={(e)=>{
+                                        //e.preventDefault();
+                                        setCallBackDialog(true);
+                                    }} className="border-btn border-btn2">Know More</a>
                                 </div>
                             </div>
                         </div>
@@ -210,7 +230,9 @@ const FeaturedCourses=()=>{
                     </div>
                 </div>
             </div>
-           
+            
+            {<CallBackDialog dialogOpen={callBackDialog} handleCloseCallback={()=>{setCallBackDialog(false)}}/>}
+
         </div>
     )
 };
