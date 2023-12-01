@@ -12,7 +12,7 @@ const FeaturedCourses=()=>{
     useEffect(()=>{
         // courses-area
         const slickElement = $('.courses-actives');
-        console.log('length', slickElement.length);
+        //console.log('length', slickElement.length);
         
         setTimeout(()=>{
         try{

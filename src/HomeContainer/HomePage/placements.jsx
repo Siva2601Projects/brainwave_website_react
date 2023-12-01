@@ -59,7 +59,7 @@ const Placements=()=>{
                 console.log('exception');
             }
         }, 10);
-    });
+    }, []);
 
     return(
         <>
