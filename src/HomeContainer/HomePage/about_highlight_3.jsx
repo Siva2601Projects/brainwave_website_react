@@ -1,5 +1,13 @@
+import { useState } from "react";
+import CallBackDialog from "../Components/callback_dialog";
+
 const AboutHighLights3 = ()=>{
 
+    const [callbackDialog, setCallBackDialog] = useState(false);
+
+    const handleCloseDialog=()=>{
+        setCallBackDialog(false);
+    };
 
     return(
         <>
@@ -20,12 +28,17 @@ const AboutHighLights3 = ()=>{
                                     and professional goals
                                 with us.</h2>
                                 <p>The automated process all your website tasks. Discover tools and techniques to engage effectively with vulnerable children and young people.</p>
-                                <a href="#" className="btn">Join now for Free</a>
+                                <a href="/" className="btn" onClick={(e)=>{
+                                    e.preventDefault();
+                                    setCallBackDialog(true);
+                                }}>Join us now!</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            <CallBackDialog dialogOpen={callbackDialog} handleCloseCallback={handleCloseDialog}/>
+
         </>
     );
 };

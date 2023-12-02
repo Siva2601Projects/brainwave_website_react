@@ -1,4 +1,13 @@
+import { useState } from "react";
+import CallBackDialog from "../Components/callback_dialog";
+
 const TopSections=()=>{
+
+    const [callbackDialog, setCallBackDialog] = useState(false);
+
+    const handleCloseDialog=()=>{
+        setCallBackDialog(false);
+    };
 
     return(
         <div>
@@ -115,12 +124,15 @@ const TopSections=()=>{
                             <div className="section-tittle text-center mt-20">
                                 <a href="/" className="border-btn" onClick={(e)=>{
                                     e.preventDefault();
+                                    setCallBackDialog(true);
                                 }}>Get a callback</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <CallBackDialog dialogOpen={callbackDialog} handleCloseCallback={handleCloseDialog}/>
         </div>
     )
 };
